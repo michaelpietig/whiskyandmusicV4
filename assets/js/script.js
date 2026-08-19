@@ -66,3 +66,24 @@ if (impressImgs.length) {
     if (e.key === 'ArrowRight') lbShow(idx + 1);
   });
 }
+(function () {
+  var PROMO_END = new Date('2026-10-02T23:59:00+02:00');
+  if (new Date() > PROMO_END) return;
+  var path = location.pathname.split('/').pop();
+  if (path === 'gewinnspiel.html' || path === 'en-gewinnspiel.html') return;
+  if (localStorage.getItem('wm_promo_dismissed_v1')) return;
+  var isEn = document.documentElement.lang === 'en';
+  var href = isEn ? 'en-gewinnspiel.html' : 'gewinnspiel.html';
+  var banner = document.createElement('div');
+  banner.className = 'promo-banner';
+  banner.innerHTML = isEn
+    ? '<div class="wrap"><div class="pb-text"><p class="pb-eyebrow">Giveaway</p><p class="pb-msg">Buy a ticket and you\'re <b>automatically entered</b> in the 2026 giveaway.</p></div><div class="pb-actions"><a class="btn" href="' + href + '">Learn more &rarr;</a><button class="pb-close" type="button" aria-label="Close">&times;</button></div></div>'
+    : '<div class="wrap"><div class="pb-text"><p class="pb-eyebrow">Gewinnspiel</p><p class="pb-msg">Ticket kaufen und <b>automatisch dabei sein</b> beim Gewinnspiel 2026.</p></div><div class="pb-actions"><a class="btn" href="' + href + '">Mehr erfahren &rarr;</a><button class="pb-close" type="button" aria-label="Schliessen">&times;</button></div></div>';
+  document.body.appendChild(banner);
+  setTimeout(function () { banner.classList.add('show'); }, 1200);
+  banner.querySelector('.pb-close').addEventListener('click', function () {
+    banner.classList.remove('show');
+    localStorage.setItem('wm_promo_dismissed_v1', '1');
+    setTimeout(function () { banner.remove(); }, 500);
+  });
+})();
