@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Buy a ticket and be automatically entered in the 2026 giveaway — 3 exclusive experiences to win.">
+<meta name="description" content="Enter your name and email for a chance to win one of three exclusive experiences at the Whisky & Music Festival 2026.">
 <title>Giveaway — Whisky & Music Festival Zürich</title>
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -48,70 +48,40 @@
       <p class="eyebrow">Giveaway</p>
     </div>
     <h1>Enter &amp; win!</h1>
-    <p class="sub" style="max-width:none">Buy a ticket and be automatically entered in the 2026 giveaway — 3 exclusive experiences to win.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p style="font-size:15.5px;line-height:1.7;color:var(--ink)">To celebrate our newly redesigned website, we're giving away three exclusive festival experiences among all ticket buyers. Just buy a ticket — that's all it takes, you're automatically entered, no matter when you bought it.</p>
-
-    <h2 class="display" style="font-size:26px;margin:44px 0 4px">How it works</h2>
-    <div class="steps-grid">
-      <div class="step">
-        <div class="num">1</div>
-        <h3>Buy a ticket</h3>
-        <p>Get your festival ticket for 27–28 November 2026 — today or weeks ago, it doesn't matter.</p>
-      </div>
-      <div class="step">
-        <div class="num">2</div>
-        <h3>You're automatically entered</h3>
-        <p>Every valid ticket is automatically entered into the draw. No sign-up, no form needed.</p>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <h3>Winners are notified</h3>
-        <p>The draw takes place the week after 2 October 2026. Winners receive an email directly.</p>
-      </div>
-    </div>
+    <p class="sub" style="max-width:none">We're giving away three exclusive experiences around the Whisky &amp; Music Festival 2026 among all entrants — just enter your name and email below, that's all it takes.</p>
   </div>
 </section>
 
 <section class="on-dark">
   <div class="wrap">
     <p class="eyebrow">The prizes</p>
-    <h2 class="display">Three exclusive experiences to win</h2>
-    <p class="sub" style="max-width:none">Around the festival, 27–28 November 2026, Volkshaus Zürich.</p>
+    <h2 class="display">Three exclusive 2026 experiences to win</h2>
 
     <div class="tix-grid">
       <div class="tix feat">
-        <h3>Top Rarities Tasting for 2</h3>
-        <div class="price">CHF 338.-</div>
-        <div class="per">value · Friday 30.10.2026, Volkshaus Zürich</div>
+        <h3>Annual Pass 2026 for 2</h3>
+        <div class="price">1st Prize</div>
         <ul>
-          <li>6 extraordinary rarities</li>
-          <li>Incl. concert with Andreas &amp; Michael Winkler</li>
-          <li>For 2 people</li>
+          <li>Entry to the Whisky &amp; Music Festival 2026 for 2 people</li>
+          <li>Entry to all Whisky &amp; Music Tastings 2026 for 2 people</li>
+          <li>Includes the Top Rarities Tasting</li>
         </ul>
       </div>
       <div class="tix">
-        <h3>Teeling Masterclass for 2</h3>
-        <div class="price">CHF 98.-</div>
-        <div class="per">value · at the festival, 27–28.11.2026</div>
+        <h3>Festival &amp; Tasting for 2</h3>
+        <div class="price">2nd Prize</div>
         <ul>
-          <li>With brand ambassador Beibhinn O&rsquo;Reilly</li>
-          <li>6 selected Teeling bottlings</li>
-          <li>For 2 people</li>
+          <li>Entry to the Whisky &amp; Music Festival 2026 for 2 people</li>
+          <li>Entry to one Tasting 2026 of your choice for 2 people</li>
+          <li>Exclusive Top Rarities Tastings</li>
         </ul>
       </div>
       <div class="tix">
-        <h3>Whisky Fair Voucher</h3>
-        <div class="price">CHF 50.-</div>
-        <div class="per">value · redeemable at the festival</div>
+        <h3>Tasting for 2</h3>
+        <div class="price">3rd Prize</div>
         <ul>
-          <li>Redeemable for tastings, fan shop &amp; more</li>
-          <li>On 27–28 November 2026</li>
-          <li>Cannot be paid out in cash</li>
+          <li>Entry to one Whisky &amp; Music Tasting 2026 of your choice for 2 people</li>
+          <li>Exclusive Top Rarities Tastings</li>
         </ul>
       </div>
     </div>
@@ -120,31 +90,38 @@
 
 <section>
   <div class="wrap">
-    <div class="newsletter-band-inner">
-      <div>
-        <p class="eyebrow">Newsletter</p>
-        <h2 class="display" style="font-size:24px;margin:6px 0 4px">Don't miss a thing</h2>
-        <p class="sub" style="max-width:52ch;margin-top:2px">Line-up &amp; ticket news straight to your inbox.</p>
+    <div style="max-width:640px">
+    <p class="eyebrow">Enter</p>
+    <h2 class="display" style="font-size:26px;margin:6px 0 20px">Enter now</h2>
+
+    <form id="gwsp-form" novalidate>
+      <div class="newsletter" style="flex-direction:column;align-items:stretch">
+        <input type="text" id="gwsp-vorname" name="vorname" placeholder="First name" aria-label="First name" required>
+        <input type="text" id="gwsp-nachname" name="nachname" placeholder="Last name" aria-label="Last name" required>
+        <input type="email" id="gwsp-email" name="email" placeholder="Email address" aria-label="Email address" required>
+        <label class="gwsp-optin">
+          <input type="checkbox" id="gwsp-newsletter" name="newsletter">
+          I'd like to subscribe to the free newsletter (line-up &amp; ticket news, masterclass updates, and unsubscribe anytime).
+        </label>
+        <button class="btn" type="submit" style="margin-top:4px">Enter now &rarr;</button>
       </div>
-      <div class="newsletter-band-form">
-        <div class="newsletter">
-          <input type="text" placeholder="First name" aria-label="First name">
-          <input type="text" placeholder="Last name" aria-label="Last name">
-          <input type="email" placeholder="Email address" aria-label="Email address">
-          <button class="btn" type="button" style="padding:11px 18px">Subscribe</button>
-        </div>
-      </div>
+    </form>
+    <div id="gwsp-thanks" class="gwsp-thanks" hidden>
+      <p class="display" style="font-size:22px;margin:0 0 8px">Thanks, you're in! 🥃</p>
+      <p class="sub" style="max-width:none">We'll notify the winners directly by email.</p>
+    </div>
     </div>
 
     <h2 class="display" style="font-size:22px;margin:56px 0 4px">Terms &amp; conditions</h2>
     <div style="font-size:14px;line-height:1.75;color:var(--mist)">
       <div class="mc-more" hidden>
-      <ul style="margin:16px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:10px;max-width:820px">
+      <ul style="margin:16px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:10px">
+        <li>Entry is free. No purchase is necessary.</li>
         <li>Open to participants aged 18 and over. Employees of the organiser and their family members are excluded.</li>
-        <li>Anyone who, by 2 October 2026, 23:59 CEST, holds a valid ticket for 27–28 November 2026 is automatically entered — regardless of when the ticket was purchased.</li>
-        <li>Promotion period: Friday, 21 August 2026 to Friday, 2 October 2026, 23:59 CEST. The draw takes place the following week.</li>
-        <li>Winners are notified by email. If there is no response within 14 days, the prize is redrawn.</li>
-        <li>Prizes are valid exclusively for the dates stated above in 2026, are not transferable to other dates, and cannot be paid out in cash.</li>
+        <li>Open to anyone who completes the form on this page with a valid name and email address. One entry per person.</li>
+        <li>The newsletter subscription is optional and not required to enter the giveaway.</li>
+        <li>Winners are drawn at random after the promotion ends and notified by email. If there is no response within 14 days, the prize is redrawn.</li>
+        <li>Prizes are valid exclusively for the Whisky &amp; Music Festival 2026 and/or the Whisky &amp; Music Tastings 2026, are not transferable to other dates, and cannot be paid out in cash.</li>
         <li>The decision is final; no correspondence will be entered into.</li>
         <li>The organiser reserves the right to end the giveaway early for good cause.</li>
         <li>Personal data is processed in accordance with our <a href="en-datenschutz.html" style="color:var(--copper-deep)">privacy policy</a>.</li>
@@ -192,7 +169,6 @@
       <span>© 2026 Whisky &amp; Music Festival Zürich</span>
       <a href="en-datenschutz.html" style="display:inline">Privacy Policy</a>
       <a href="en-impressum.html" style="display:inline">Imprint</a>
-      <a href="en-gewinnspiel.html" style="display:inline">Giveaway</a>
       <span style="margin-left:auto;opacity:.7">facebook.com/whiskymusicfestival · instagram.com/whiskymusicfestival</span>
     </div>
   </div>
