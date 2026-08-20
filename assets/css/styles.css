@@ -325,6 +325,7 @@ body.show-notes .notes-toggle{background:var(--copper)}
 /* ---------- location ---------- */
 .loc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:stretch}
 .loc-map{border-radius:8px;overflow:hidden;box-shadow:var(--shadow);background:var(--parchment-2);min-height:320px;position:relative}
+.loc-map-embed{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 .loc-map-link{
   position:absolute;right:14px;bottom:14px;z-index:2;
   display:inline-flex;align-items:center;gap:7px;
