@@ -77,8 +77,8 @@ var GEWINNSPIEL_LIVE = true; // auf true setzen, sobald die bezahlte Kampagne st
   var banner = document.createElement('div');
   banner.className = 'promo-banner';
   banner.innerHTML = isEn
-    ? '<div class="wrap"><div class="pb-text"><p class="pb-eyebrow">Giveaway</p><p class="pb-msg">Enter now for a chance to win one of three <b>exclusive 2026 experiences</b>.</p></div><div class="pb-actions"><a class="btn" href="' + href + '">Learn more &rarr;</a><button class="pb-close" type="button" aria-label="Close">&times;</button></div></div>'
-    : '<div class="wrap"><div class="pb-text"><p class="pb-eyebrow">Gewinnspiel</p><p class="pb-msg">Jetzt eintragen und eines von drei <b>exklusiven Erlebnissen 2026</b> gewinnen.</p></div><div class="pb-actions"><a class="btn" href="' + href + '">Mehr erfahren &rarr;</a><button class="pb-close" type="button" aria-label="Schliessen">&times;</button></div></div>';
+    ? '<div class="wrap"><div class="pb-text"><p class="pb-eyebrow">Giveaway</p><p class="pb-msg">Enter now for a chance to win one of three <b>exclusive 2026/2027 experiences</b>.</p></div><div class="pb-actions"><a class="btn" href="' + href + '">Learn more &rarr;</a><button class="pb-close" type="button" aria-label="Close">&times;</button></div></div>'
+    : '<div class="wrap"><div class="pb-text"><p class="pb-eyebrow">Gewinnspiel</p><p class="pb-msg">Jetzt eintragen und eines von drei <b>exklusiven Erlebnissen 2026/2027</b> gewinnen.</p></div><div class="pb-actions"><a class="btn" href="' + href + '">Mehr erfahren &rarr;</a><button class="pb-close" type="button" aria-label="Schliessen">&times;</button></div></div>';
   document.body.appendChild(banner);
   setTimeout(function () { banner.classList.add('show'); }, 1200);
   banner.querySelector('.pb-close').addEventListener('click', function () {
