@@ -108,3 +108,36 @@ var GWSP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_ks-4NAJWFFxm1p
     thanks.hidden = false;
   });
 })();
+var KONTAKT_SCRIPT_URL = 'PASTE_APPS_SCRIPT_URL_HERE';
+(function () {
+  var form = document.getElementById('kontakt-form');
+  if (!form) return;
+  var select = document.getElementById('kontakt-anliegen');
+  var params = new URLSearchParams(location.search);
+  var anliegen = params.get('anliegen');
+  if (anliegen && select) {
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].value === anliegen) { select.value = anliegen; break; }
+    }
+  }
+  var thanks = document.getElementById('kontakt-thanks');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var vorname = document.getElementById('kontakt-vorname').value.trim();
+    var nachname = document.getElementById('kontakt-nachname').value.trim();
+    var email = document.getElementById('kontakt-email').value.trim();
+    var telefon = document.getElementById('kontakt-telefon').value.trim();
+    var anliegenVal = select.value;
+    var nachricht = document.getElementById('kontakt-nachricht').value.trim();
+    if (!vorname || !nachname || !email || !anliegenVal || !nachricht) return;
+    var url = KONTAKT_SCRIPT_URL + '?vorname=' + encodeURIComponent(vorname) +
+      '&nachname=' + encodeURIComponent(nachname) +
+      '&email=' + encodeURIComponent(email) +
+      '&telefon=' + encodeURIComponent(telefon) +
+      '&anliegen=' + encodeURIComponent(anliegenVal) +
+      '&nachricht=' + encodeURIComponent(nachricht);
+    try { fetch(url, { mode: 'no-cors', keepalive: true }); } catch (err) {}
+    form.hidden = true;
+    thanks.hidden = false;
+  });
+})();

@@ -305,19 +305,22 @@ body.show-notes .notes-toggle{background:var(--copper)}
 @media (max-width:900px){.tix-grid{grid-template-columns:1fr}}
 
 /* ---------- festival whisky promo ---------- */
-.wp-grid{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start;margin-top:36px}
+.wp-grid{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:stretch;margin-top:36px}
+.wp-grid>div:first-child{position:relative}
+.wp-grid>div:last-child{display:flex;flex-direction:column}
 .wp-label{display:block;width:100%;border-radius:14px;box-shadow:var(--shadow)}
+.wp-label+p{position:absolute;top:100%;left:0;right:0}
 .wp-text{font-size:15px;line-height:1.7;color:var(--mist);margin-bottom:24px}
-.wp-facts{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-direction:column;gap:12px}
+.wp-facts{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-direction:column;gap:12px}
 .wp-facts li{font-size:14.5px;color:var(--mist);padding-left:20px;position:relative;line-height:1.5}
 .wp-facts li::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:9px;height:9px;border:1.5px solid var(--copper-deep);border-radius:50%}
 .wp-facts b{color:var(--ink)}
-.wp-cta-row{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.wp-cta-row{display:flex;flex-direction:column;align-items:flex-start;flex:1 0 auto;margin-top:6px}
 .wp-price{font-family:"Fraunces",serif;font-size:32px;font-weight:600;color:var(--copper-deep);margin-bottom:0}
-.wp-price span{display:block;font-family:"Archivo",sans-serif;font-size:12.5px;font-weight:400;color:var(--mist);margin-top:5px;letter-spacing:.02em}
+.wp-price span{display:block;font-family:"Archivo",sans-serif;font-size:12.5px;font-weight:400;color:var(--mist);margin-top:2px;letter-spacing:.02em}
+.wp-cta-row a.btn{margin-top:auto}
 .wp-grid .btn.ghost{padding-left:8px;flex:0 0 auto}
-@media (max-width:600px){.wp-cta-row{flex-direction:column;align-items:flex-start;gap:20px}}
-@media (max-width:820px){.wp-grid{grid-template-columns:1fr}.wp-label{max-width:320px;margin:0 auto}}
+@media (max-width:820px){.wp-grid{grid-template-columns:1fr}.wp-grid>div:last-child{display:block}.wp-cta-row{margin-top:20px}.wp-cta-row a.btn{margin-top:14px}.wp-label{max-width:320px;margin:0 auto}.wp-label+p{position:static;max-width:320px;margin-left:auto;margin-right:auto}}
 
 /* ---------- location ---------- */
 .loc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:stretch}
@@ -344,11 +347,14 @@ footer{background:var(--peat);color:var(--mist-d);padding:72px 0 32px}
 .foot-col a{display:block;text-decoration:none;color:var(--mist-d);font-size:14px;margin-bottom:9px}
 .foot-col a:hover{color:var(--parchment)}
 .newsletter{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
-.newsletter input{
+.newsletter input,.newsletter select,.newsletter textarea{
   background:var(--peat-2);border:1px solid var(--line-d);border-radius:4px;color:var(--parchment);
   padding:11px 13px;font:inherit;font-size:13.5px;flex:1;min-width:160px;
 }
-.newsletter input::placeholder{color:var(--mist-d)}
+.newsletter input::placeholder,.newsletter textarea::placeholder{color:var(--mist-d)}
+.newsletter select{cursor:pointer}
+.newsletter select option{background:var(--peat-2);color:var(--parchment)}
+.newsletter textarea{min-height:120px;resize:vertical;font-family:inherit}
 .legal{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:12.5px;padding-top:32px;margin-top:48px;border-top:1px solid var(--line-d)}
 @media (max-width:820px){.foot-grid{grid-template-columns:1fr;gap:32px}}
 
@@ -470,6 +476,9 @@ footer{background:var(--peat);color:var(--mist-d);padding:72px 0 32px}
 .on-dark{background:var(--parchment);color:var(--ink)}
 section.on-dark .eyebrow{color:var(--copper-deep)}
 section.on-dark .sub{color:var(--mist)}
+
+/* Homepage only — alternating mint shades between sections (lighter/darker parchment, no dark peat) */
+#aussteller,#festival-whisky,#tastings-teaser{background:var(--parchment-2)}
 
 .hero .scene{display:none}
 .hero-illustration{
