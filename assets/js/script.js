@@ -108,7 +108,7 @@ var GWSP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_ks-4NAJWFFxm1p
     thanks.hidden = false;
   });
 })();
-var KONTAKT_SCRIPT_URL = 'PASTE_APPS_SCRIPT_URL_HERE';
+var KONTAKT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_ks-4NAJWFFxm1pS5UGVvPfQUfIIdQnAdLEn7ExoMgzlQP_wHUv0X_Su3I1_dtc3x/exec';
 (function () {
   var form = document.getElementById('kontakt-form');
   if (!form) return;
