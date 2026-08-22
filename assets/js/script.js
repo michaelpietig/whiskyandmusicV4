@@ -99,10 +99,12 @@ var GWSP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_ks-4NAJWFFxm1p
     var email = document.getElementById('gwsp-email').value.trim();
     var newsletter = document.getElementById('gwsp-newsletter').checked ? '1' : '0';
     if (!vorname || !nachname || !email) return;
+    var lang = document.documentElement.lang === 'en' ? 'en' : 'de';
     var url = GWSP_SCRIPT_URL + '?vorname=' + encodeURIComponent(vorname) +
       '&nachname=' + encodeURIComponent(nachname) +
       '&email=' + encodeURIComponent(email) +
-      '&newsletter=' + newsletter;
+      '&newsletter=' + newsletter +
+      '&lang=' + lang;
     try { fetch(url, { mode: 'no-cors', keepalive: true }); } catch (err) {}
     form.hidden = true;
     thanks.hidden = false;
