@@ -300,7 +300,7 @@ body.show-notes .notes-toggle{background:var(--copper)}
 .tix .per{font-size:12.5px;color:var(--mist-d);margin-bottom:18px}
 .tix ul{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-direction:column;gap:9px}
 .tix li{font-size:13.5px;color:var(--mist-d);padding-left:20px;position:relative}
-.tix li::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:9px;height:9px;border:1.5px solid var(--copper-glow);border-radius:50%}
+.tix li::before{content:"";position:absolute;left:0;top:0.8em;transform:translateY(-50%);width:9px;height:9px;border:1.5px solid var(--copper-glow);border-radius:50%}
 .tix .btn{width:100%;justify-content:center}
 @media (max-width:900px){.tix-grid{grid-template-columns:1fr}}
 
